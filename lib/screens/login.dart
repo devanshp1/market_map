@@ -228,7 +228,7 @@ class _LoginPageState extends State<LoginPage> {
           decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               image: DecorationImage(
-                  fit: BoxFit.fill, image: AssetImage("w1.jpg"))),
+                  fit: BoxFit.fill, image: AssetImage("assets/w1.jpg"))),
         ),
         Scaffold(
           backgroundColor: Colors.transparent,

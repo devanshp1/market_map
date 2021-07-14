@@ -66,7 +66,6 @@ class _ProfileState extends State<Profile> {
                         await ImagePicker()
                             .getImage(source: ImageSource.gallery)
                             .then((value) {
-                          print("$value jjhhlklhjlh");
                           image = File(value.path);
                           return image;
                         });
@@ -121,7 +120,6 @@ class _ProfileState extends State<Profile> {
                         await ImagePicker()
                             .getImage(source: ImageSource.camera)
                             .then((value) {
-                          print("$value.path jjhhlklhjlh");
                           print(value.path);
                           image = File(value.path);
                           return image;
@@ -153,7 +151,6 @@ class _ProfileState extends State<Profile> {
                         setState(() {
                           _isLoading = false;
                         });
-                        //await db.updateimage(uploadedFileURL: uploadedFileURL);
                         return image;
                       },
                       backgroundColor: Theme.of(context).primaryColor,
@@ -206,8 +203,6 @@ class _ProfileState extends State<Profile> {
                 Form(
                     key: _form,
                     child: Column(
-                      // padding: EdgeInsets.all(12.0),
-                      // shrinkWrap: true,
                       children: <Widget>[
                         Row(
                           mainAxisSize: MainAxisSize.min,
@@ -217,7 +212,7 @@ class _ProfileState extends State<Profile> {
                             CircleAvatar(
                               radius: 75,
                               backgroundImage: image == null
-                                  ? AssetImage('l.jpg')
+                                  ? AssetImage('assets/l.jpg')
                                   : NetworkImage(uploadedFileURL),
                             ),
                             Visibility(

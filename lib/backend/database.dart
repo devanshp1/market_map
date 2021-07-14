@@ -340,7 +340,6 @@ Future uploadFile(BuildContext context, String uid) async {
   StorageUploadTask uploadTask = storageReference.putFile(image);
   await uploadTask.onComplete;
 
-  //if(uploadTask.isSuccessful){
 
   await storageReference.getDownloadURL().then((fileURL) {
     final uploadFileURL = fileURL;
